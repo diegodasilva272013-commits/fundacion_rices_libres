@@ -41,7 +41,7 @@ export default function ContactSection() {
         >
           {/* Imagen de fondo */}
           <img
-            src="/imagen%20contact.png"
+            src="/contactos.png"
             alt="Contacto Fundación Raíces Libres"
             className="block w-full h-auto select-none"
             draggable={false}
