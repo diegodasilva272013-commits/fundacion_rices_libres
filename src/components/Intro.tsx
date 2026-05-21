@@ -53,8 +53,8 @@ export default function Intro() {
               className="absolute inset-0 flex items-center justify-center pointer-events-none"
               aria-hidden
             >
-              <span className="absolute h-[260px] w-[260px] sm:h-[360px] sm:w-[360px] md:h-[520px] md:w-[520px] rounded-full border border-forest/10" />
-              <span className="absolute h-[180px] w-[180px] sm:h-[260px] sm:w-[260px] md:h-[380px] md:w-[380px] rounded-full border border-gold/20" />
+              <span className="absolute h-[220px] w-[220px] sm:h-[360px] sm:w-[360px] md:h-[520px] md:w-[520px] rounded-full border border-forest/10" />
+              <span className="absolute h-[150px] w-[150px] sm:h-[260px] sm:w-[260px] md:h-[380px] md:w-[380px] rounded-full border border-gold/20" />
             </motion.div>
 
             {/* Logo grande */}
@@ -65,7 +65,7 @@ export default function Intro() {
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               exit={{ opacity: 0, scale: 1.08, filter: 'blur(6px)' }}
               transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative h-32 sm:h-44 md:h-60 lg:h-72 w-auto select-none drop-shadow-[0_18px_40px_rgba(11,61,36,0.18)]"
+              className="relative h-28 sm:h-44 md:h-60 lg:h-72 w-auto select-none drop-shadow-[0_18px_40px_rgba(11,61,36,0.18)]"
               draggable={false}
             />
 
@@ -75,13 +75,13 @@ export default function Intro() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mt-6 sm:mt-8 flex flex-col items-center gap-2.5 sm:gap-3 px-2"
+              className="relative mt-5 sm:mt-8 flex flex-col items-center gap-2 sm:gap-3 px-4 max-w-[20rem] sm:max-w-none"
             >
               <span className="h-px w-10 bg-gold/70" />
-              <span className="font-serif uppercase tracking-[0.22em] sm:tracking-[0.3em] text-forest text-[12px] sm:text-sm md:text-base">
+              <span className="font-serif uppercase tracking-[0.18em] sm:tracking-[0.3em] text-forest text-[11px] sm:text-sm md:text-base text-center">
                 Fundación Raíces Libres
               </span>
-              <span className="text-[9px] sm:text-[10px] tracking-[0.24em] sm:tracking-[0.42em] uppercase text-muted leading-snug max-w-[18rem] sm:max-w-none">
+              <span className="text-[8.5px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.42em] uppercase text-muted leading-snug text-center">
                 Por el derecho de los niños a ser escuchados
               </span>
             </motion.div>

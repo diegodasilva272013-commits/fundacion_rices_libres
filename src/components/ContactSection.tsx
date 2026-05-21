@@ -47,8 +47,8 @@ export default function ContactSection() {
             draggable={false}
           />
 
-          {/* Botones flotantes sobre la imagen */}
-          <div className="absolute left-0 right-0 bottom-[6%] sm:bottom-[8%] flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3 px-6">
+          {/* Overlays clicables sobre los botones dibujados en la imagen (solo desktop) */}
+          <div className="hidden md:flex absolute left-0 right-0 bottom-[6%] sm:bottom-[8%] flex-row items-center justify-center gap-3 px-6">
             {buttons.map((b) => (
               <motion.a
                 key={b.label}
@@ -57,7 +57,8 @@ export default function ContactSection() {
                 rel={b.external ? 'noopener noreferrer' : undefined}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/80 bg-ink/40 backdrop-blur-sm text-paper px-4 sm:px-6 py-2.5 sm:py-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] hover:bg-gold hover:text-ink hover:border-gold transition-colors w-[80%] sm:w-auto"
+                aria-label={b.label}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/0 hover:border-gold/80 bg-transparent hover:bg-ink/30 backdrop-blur-[1px] text-paper/0 hover:text-paper px-6 py-3 text-xs uppercase tracking-[0.28em] transition-colors w-auto min-w-[150px]"
               >
                 <b.icon size={14} />
                 {b.label}
@@ -65,6 +66,23 @@ export default function ContactSection() {
             ))}
           </div>
         </motion.div>
+
+        {/* Botones reales (mobile principalmente, también visibles desktop como CTA secundaria clara) */}
+        <div className="md:hidden mt-6 flex flex-col items-stretch gap-2.5 max-w-sm mx-auto">
+          {buttons.map((b) => (
+            <motion.a
+              key={b.label}
+              href={b.href}
+              target={b.external ? '_blank' : undefined}
+              rel={b.external ? 'noopener noreferrer' : undefined}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/80 bg-ink text-paper px-5 py-3 text-[11px] uppercase tracking-[0.24em] font-medium"
+            >
+              <b.icon size={15} />
+              {b.label}
+            </motion.a>
+          ))}
+        </div>
 
         {/* WhatsApp directo debajo del card */}
         <p className="mt-6 text-center text-xs sm:text-sm text-muted tracking-wide">
