@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-paper text-ink font-sans;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+::selection {
+  background: #0B3D24;
+  color: #fff;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Utilidades de marca */
+.container-x {
+  @apply mx-auto w-full max-w-container px-6 md:px-10;
+}
+
+.eyebrow {
+  @apply text-[11px] md:text-xs uppercase tracking-[0.32em] font-medium text-forest;
+}
+
+.section-title {
+  @apply font-serif font-semibold uppercase tracking-[0.08em] text-ink;
+  font-size: clamp(28px, 3.6vw, 44px);
+}
+
+.hairline {
+  @apply h-px w-12 bg-ink/20;
+}
+
+/* Subtle grain overlay para el hero negro */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+
+/* Gold shimmer line */
+.gold-line {
+  background: linear-gradient(90deg, transparent 0%, rgba(201,154,30,0) 25%, rgba(201,154,30,0.75) 50%, rgba(201,154,30,0) 75%, transparent 100%);
+  background-size: 200% 100%;
+}
