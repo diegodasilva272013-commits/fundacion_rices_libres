@@ -19,21 +19,21 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="quienes-somos" className="bg-paper py-20 md:py-28">
+    <section id="quienes-somos" className="bg-paper py-16 sm:py-20 md:py-28">
       <div className="container-x">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <p className="eyebrow mb-4">— Nuestra esencia —</p>
           <h2 className="section-title">QUIÉNES SOMOS</h2>
           <div className="mt-6 mx-auto h-px w-16 bg-gold/70" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-center">
           {/* Columna visual con video */}
           <motion.div
             initial={{ opacity: 0, x: -50, scale: 0.96 }}
@@ -42,7 +42,7 @@ export default function AboutSection() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-ink shadow-[0_30px_80px_-30px_rgba(0,0,0,0.45)]">
+            <div className="relative aspect-[4/5] sm:aspect-[4/5] rounded-2xl overflow-hidden bg-ink shadow-[0_30px_80px_-30px_rgba(0,0,0,0.45)]">
               <video
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -85,11 +85,11 @@ export default function AboutSection() {
             className="max-w-xl"
           >
             <p className="eyebrow mb-5">— Sobre la fundación —</p>
-            <h3 className="font-serif font-semibold uppercase tracking-[0.04em] leading-tight mb-8"
-                style={{ fontSize: 'clamp(28px, 3.4vw, 44px)' }}>
+            <h3 className="font-serif font-semibold uppercase tracking-[0.03em] sm:tracking-[0.04em] leading-tight mb-6 sm:mb-8"
+                style={{ fontSize: 'clamp(24px, 5.6vw, 44px)' }}>
               Defendemos el derecho de los niños a ser escuchados.
             </h3>
-            <p className="text-base md:text-lg leading-relaxed text-ink/75 mb-10">
+            <p className="text-[15px] sm:text-base md:text-lg leading-relaxed text-ink/75 mb-8 sm:mb-10">
               Fundación Raíces Libres nace para defender el derecho de los niños a ser
               escuchados, reconocidos y protegidos en su dimensión biológica y emocional.
               Trabajamos para visibilizar la importancia de la infancia, la verdad, la escucha
@@ -98,7 +98,7 @@ export default function AboutSection() {
 
             <a
               href="#contacto"
-              className="group inline-flex items-center gap-3 rounded-full bg-ink text-paper px-7 py-3.5 text-xs uppercase tracking-[0.24em] font-medium overflow-hidden relative"
+              className="group inline-flex items-center gap-3 rounded-full bg-ink text-paper px-6 sm:px-7 py-3.5 text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.24em] font-medium overflow-hidden relative"
             >
               <span className="absolute inset-0 bg-forest translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="relative">Contactar</span>

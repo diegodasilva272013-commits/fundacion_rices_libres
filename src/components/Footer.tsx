@@ -17,7 +17,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-paper border-t border-line">
-      <div className="container-x py-16 md:py-20">
+      <div className="container-x py-12 sm:py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,13 +26,13 @@ export default function Footer() {
           className="flex flex-col items-center text-center gap-8"
         >
           <a href="#top" className="flex items-center gap-3">
-            <img src="/logo.png" alt="Logo Fundación Raíces Libres" className="h-12 w-auto" />
-            <span className="font-semibold tracking-wider-2 text-forest text-sm">
+            <img src="/logo.png" alt="Logo Fundación Raíces Libres" className="h-10 sm:h-12 w-auto" />
+            <span className="font-semibold tracking-wider-2 text-forest text-[12px] sm:text-sm">
               FUNDACIÓN RAÍCES LIBRES
             </span>
           </a>
 
-          <nav className="flex flex-wrap items-center justify-center gap-7">
+          <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-7">
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <div className="container-x py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted">
+        <div className="container-x py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-muted text-center md:text-left">
           <p>© 2026 Fundación Raíces Libres. Todos los derechos reservados.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-forest transition-colors">Privacidad</a>

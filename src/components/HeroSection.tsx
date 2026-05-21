@@ -15,23 +15,23 @@ export default function HeroSection() {
     <section
       id="proposito"
       ref={ref}
-      className="relative bg-ink text-paper pt-32 md:pt-36 pb-20 md:pb-24 grain overflow-hidden"
+      className="relative bg-ink text-paper pt-28 sm:pt-32 md:pt-36 pb-24 sm:pb-28 md:pb-32 grain overflow-hidden"
     >
       {/* Decorative gold line */}
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[60%] h-px gold-line animate-shimmer" aria-hidden />
+      <div className="absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 w-[72%] sm:w-[60%] h-px gold-line animate-shimmer" aria-hidden />
 
       <motion.div style={{ y, opacity }} className="container-x text-center relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-[11px] tracking-[0.42em] uppercase text-gold mb-6"
+          className="text-[10px] sm:text-[11px] tracking-[0.32em] sm:tracking-[0.42em] uppercase text-gold mb-5 sm:mb-6"
         >
           — Fundación Raíces Libres —
         </motion.p>
 
-        <h1 className="font-serif font-semibold uppercase leading-[1.02] tracking-[0.02em] max-w-5xl mx-auto"
-            style={{ fontSize: 'clamp(32px, 5.4vw, 68px)' }}>
+        <h1 className="font-serif font-semibold uppercase leading-[1.05] sm:leading-[1.02] tracking-[0.02em] max-w-5xl mx-auto break-words"
+            style={{ fontSize: 'clamp(28px, 8vw, 68px)' }}>
           {words.map((w, i) => (
             <motion.span
               key={i}
@@ -49,7 +49,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="mt-7 mx-auto max-w-2xl text-base md:text-lg text-paper/75 font-light"
+          className="mt-6 sm:mt-7 mx-auto max-w-2xl text-sm sm:text-base md:text-lg text-paper/75 font-light px-2 sm:px-0"
         >
           Organización global que defiende el derecho biológico y emocional de la infancia.
         </motion.p>

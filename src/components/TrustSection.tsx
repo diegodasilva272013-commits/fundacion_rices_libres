@@ -26,8 +26,8 @@ export default function TrustSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.8 }}
-          className="font-serif font-semibold text-center uppercase tracking-[0.06em] mb-14 mx-auto max-w-3xl"
-          style={{ fontSize: 'clamp(22px, 2.8vw, 34px)' }}
+          className="font-serif font-semibold text-center uppercase tracking-[0.04em] sm:tracking-[0.06em] mb-10 sm:mb-14 mx-auto max-w-3xl px-2"
+          style={{ fontSize: 'clamp(19px, 4.8vw, 34px)' }}
         >
           El espacio de confianza para defender
           <br className="hidden md:block" /> la voz de la infancia
@@ -38,7 +38,7 @@ export default function TrustSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid grid-cols-3 md:grid-cols-6 gap-y-8 gap-x-6 max-w-3xl mx-auto place-items-center"
+          className="grid grid-cols-3 md:grid-cols-6 gap-y-6 sm:gap-y-8 gap-x-4 sm:gap-x-6 max-w-3xl mx-auto place-items-center"
         >
           {Array.from({ length: 6 }).map((_, i) => (
             <motion.li
@@ -48,7 +48,7 @@ export default function TrustSection() {
               transition={{ type: 'spring', stiffness: 240, damping: 18 }}
               className="relative"
             >
-              <span className="block h-16 w-16 md:h-[68px] md:w-[68px] rounded-full bg-ink shadow-[0_8px_24px_-12px_rgba(0,0,0,0.4)]" />
+              <span className="block h-14 w-14 sm:h-16 sm:w-16 md:h-[68px] md:w-[68px] rounded-full bg-ink shadow-[0_8px_24px_-12px_rgba(0,0,0,0.4)]" />
               <span className="absolute inset-0 rounded-full ring-1 ring-gold/0 hover:ring-gold/60 transition" />
             </motion.li>
           ))}

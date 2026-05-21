@@ -30,16 +30,16 @@ export default function Header() {
           : 'bg-paper/60 backdrop-blur-sm border-b border-transparent'
       }`}
     >
-      <div className="container-x flex items-center justify-between h-[72px]">
-        <a href="#top" className="flex items-center gap-3 group">
+      <div className="container-x flex items-center justify-between h-16 md:h-[72px]">
+        <a href="#top" className="flex items-center gap-2 sm:gap-3 group min-w-0">
           <motion.img
             src="/logo.png"
             alt="Fundación Raíces Libres"
-            className="h-9 w-auto"
+            className="h-8 md:h-9 w-auto shrink-0"
             whileHover={{ rotate: -3, scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 260, damping: 18 }}
           />
-          <span className="hidden sm:inline text-[12px] font-semibold tracking-wider-2 text-forest">
+          <span className="hidden sm:inline text-[11px] md:text-[12px] font-semibold tracking-wider-2 text-forest truncate">
             FUNDACIÓN RAÍCES LIBRES
           </span>
         </a>
@@ -67,11 +67,12 @@ export default function Header() {
         </nav>
 
         <button
-          aria-label="Abrir menú"
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-line"
+          className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-paper/80 active:scale-95 transition"
         >
-          {open ? <X size={18} /> : <Menu size={18} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 

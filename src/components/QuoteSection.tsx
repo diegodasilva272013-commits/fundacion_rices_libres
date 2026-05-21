@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 export default function QuoteSection() {
   return (
-    <section className="relative bg-paper py-20 md:py-24 border-t border-line overflow-hidden">
+    <section className="relative bg-paper py-16 sm:py-20 md:py-24 border-t border-line overflow-hidden">
       {/* Letra decorativa */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -13,7 +13,7 @@ export default function QuoteSection() {
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden
       >
-        <span className="font-serif text-[28rem] leading-none text-forest select-none">“</span>
+        <span className="font-serif text-[14rem] sm:text-[20rem] md:text-[28rem] leading-none text-forest select-none">“</span>
       </motion.div>
 
       <div className="container-x relative">
@@ -27,7 +27,7 @@ export default function QuoteSection() {
           <Quote className="mx-auto text-gold mb-6" size={28} />
           <p
             className="font-serif italic font-medium leading-[1.35] text-ink"
-            style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}
+            style={{ fontSize: 'clamp(20px, 5.4vw, 38px)' }}
           >
             “Cada niño merece ser escuchado, protegido y reconocido en su verdad.”
           </p>

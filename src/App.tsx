@@ -39,7 +39,7 @@ export default function App() {
 
         {/* Bloque puente con el video, centrado entre hero (negro) y contacto (gris) */}
         <div className="relative bg-mist">
-          <div className="container-x -mt-24 md:-mt-32 pb-16 md:pb-20 relative z-10">
+          <div className="container-x -mt-16 sm:-mt-24 md:-mt-32 pb-14 sm:pb-16 md:pb-20 relative z-10">
             <VideoBlock />
           </div>
         </div>

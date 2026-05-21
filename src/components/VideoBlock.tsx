@@ -14,20 +14,21 @@ export default function VideoBlock() {
       <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-2xl pointer-events-none" />
 
       {/* Placeholder para video Veo 3.1 */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-8 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 sm:gap-4 px-5 sm:px-8 text-center">
         <motion.div
           whileHover={{ scale: 1.08 }}
           transition={{ type: 'spring', stiffness: 220, damping: 16 }}
-          className="relative flex h-20 w-20 items-center justify-center rounded-full bg-forest text-paper shadow-xl cursor-pointer"
+          className="relative flex h-14 w-14 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-forest text-paper shadow-xl cursor-pointer"
         >
           <span className="absolute inset-0 rounded-full bg-forest/30 animate-pulse-soft" />
-          <Play size={28} className="relative z-10 ml-1" fill="currentColor" />
+          <Play size={22} className="relative z-10 ml-1 sm:hidden" fill="currentColor" />
+          <Play size={28} className="relative z-10 ml-1 hidden sm:block" fill="currentColor" />
         </motion.div>
         <div className="space-y-1.5">
-          <p className="text-[12px] md:text-sm font-semibold tracking-[0.24em] uppercase text-forest">
+          <p className="text-[10px] sm:text-[12px] md:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.24em] uppercase text-forest">
             Video de presentación de la Fundación
           </p>
-          <p className="text-xs text-muted max-w-md mx-auto">
+          <p className="text-[11px] sm:text-xs text-muted max-w-md mx-auto">
             Espacio reservado para el video institucional (Veo 3.1)
           </p>
         </div>
